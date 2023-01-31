@@ -63,7 +63,11 @@ class SignUp extends React.Component {
     render() {
         return (
             <>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <button type="button"
+                    className="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter">
+
                     Sign Up
                 </button>
 
@@ -127,8 +131,11 @@ class SignUp extends React.Component {
 
                             <div className="d-flex p-4">
                                 <input className="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1" />
-                                <label className="form-check-label check-label" htmlFor="defaultCheck1">
-                                    I agree to Zomato's <span className="red">Terms of Service, Privacy Policy</span> and <span className="red">Content Policies</span>
+                                <label className="form-check-label check-label"
+                                    htmlFor="defaultCheck1">
+                                    I agree to Zomato's
+                                    <span className="red">Terms of Service, Privacy Policy</span>
+                                    and <span className="red">Content Policies</span>
                                 </label>
                             </div>
 
@@ -153,7 +160,10 @@ class SignUp extends React.Component {
                                 <span className='continue-with-google-text'>Continue with Google</span>
                             </div>
 
-                            <p className="signup-bottom-heading mt-3">Already have an account? <span className="red">Log in</span></p>
+                            <p className="signup-bottom-heading mt-3">
+                                Already have an account?
+                                <span className="red">Log in</span>
+                            </p>
 
 
                         </div>
