@@ -1,7 +1,65 @@
 import React from 'react'
+import validator from 'validator';
 import "./SignUp.css"
 
 class SignUp extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            userName: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+            checkbox: false,
+            unameError: "",
+            emailError: "",
+            passwordError: "",
+            confirmPassError: "",
+            checkboxError: ""
+        }
+    }
+
+    validateUserName = (value) => {
+        console.log("ok")
+        if (value.trim().length === 0) {
+            this.setState(
+                { unameError: true }
+            );
+        }
+        else {
+            this.setState(
+                { unameError: false, userName: value }
+            );
+        }
+    }
+    validateEmail = (value) => {
+        if (validator.isEmail(value)) {
+            this.setState(
+                { emailError: false, email: value }
+            );
+        }
+        else {
+            this.setState(
+                { emailError: true }
+            );
+        }
+    }
+
+    validatePassword = (value) => {
+        if (validator.isStrongPassword(value)) {
+            this.setState(
+                { passwordError: false, password: value }
+            );
+        }
+        else {
+            this.setState(
+                { passwordError: true }
+            );
+        }
+    }
+
+
     render() {
         return (
             <>
@@ -10,30 +68,73 @@ class SignUp extends React.Component {
                 </button>
 
 
-                <div className="modal fade " id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered" role="document">
-                        <div className="modal-content p-4">
+                <div className="modal fade "
+                    id="exampleModalCenter"
+                    tabIndex="-1"
+                    role="dialog"
+                    aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true">
+
+                    <div className="modal-dialog modal-dialog-centered modal-md " role="document">
+
+                        <div className="modal-content modal-container-padding">
+
                             <section className="d-flex signup-heading">
                                 <h2 className="signup-form-heading">Sign up</h2>
 
                             </section>
 
                             <section className="d-flex flex-column input-section">
-                                <input type="text" class="form-control " placeholder="Full Name" />
-                                <input type="text" class="form-control " placeholder="Email" />
-                                <input type="text" class="form-control " placeholder="Password" />
+                                <input type="text"
+                                    className="input-field-signup "
+                                    placeholder="Full Name"
+                                    onChange={(event) => {
+                                        this.validateUserName(event.target.value)
+                                    }}
+                                />
+
+                                {this.state.unameError ?
+                                    <div style={{ color: "rgb(225,69,70)", fontSize: "12px" }}>
+                                        Please enter a valid name</div> : null}
+
+
+
+                                <input type="text"
+                                    className="input-field-signup "
+                                    placeholder="Email"
+                                    onChange={(event) => {
+                                        this.validateEmail(event.target.value)
+                                    }} />
+
+                                {this.state.emailError ?
+                                    <div style={{ color: "rgb(225,69,70)", fontSize: "12px" }}>
+                                        Invalid Email id
+                                    </div> : null}
+
+
+                                <input type="password"
+                                    className="input-field-signup"
+                                    placeholder="Password"
+                                    onChange={(event) => {
+                                        this.validatePassword(event.target.value)
+                                    }} />
+                                {this.state.passwordError ?
+                                    <div style={{ color: "rgb(225,69,70)", fontSize: "12px" }}>
+                                        Invalid Password
+                                    </div> : null}
+
                             </section>
 
                             <div className="d-flex p-4">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                                <label class="form-check-label check-label" for="defaultCheck1">
+                                <input className="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1" />
+                                <label className="form-check-label check-label" htmlFor="defaultCheck1">
                                     I agree to Zomato's <span className="red">Terms of Service, Privacy Policy</span> and <span className="red">Content Policies</span>
                                 </label>
                             </div>
 
 
                             <button className="create-account mb-3">Create account</button>
-                            <button className="continue-with-google">
+                            <div role="button" className="continue-with-google">
                                 <svg
                                     width="24"
                                     height="24"
@@ -49,9 +150,10 @@ class SignUp extends React.Component {
                                     <path d="M18.0208 2.53241L14.4573 5.44981C13.4546 4.82307 12.2694 4.46102 10.9996 4.46102C8.13229 4.46102 5.69596 6.30682 4.81356 8.87494L1.23009 5.9412H1.22949C3.06022 2.41154 6.74823 0 10.9996 0C13.6686 0 16.1158 0.950726 18.0208 2.53241Z" fill="#F14336">
                                     </path>
                                 </svg>
-                                Continue with Google</button>
+                                <span className='continue-with-google-text'>Continue with Google</span>
+                            </div>
 
-                            <p className="signup-bottom-heading mt-2">Already have an account? <span className="red">Log in</span></p>
+                            <p className="signup-bottom-heading mt-3">Already have an account? <span className="red">Log in</span></p>
 
 
                         </div>
