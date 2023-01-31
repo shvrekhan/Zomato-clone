@@ -1,0 +1,42 @@
+.signup-form-heading {
+  font-size: 1.875rem;
+  line-height: 4rem;
+  margin: 1.5rem 0px;
+  font-weight: 500;
+  color: rgb(79, 79, 79);
+}
+
+.input-field-signup {
+  padding: 12.5px 11.5px;
+}
+
+.create-account {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  background-color: rgb(206, 206, 206);
+  color: white;
+  font-size: 1.1rem;
+}
+
+.continue-with-google {
+  background-color: rgb(255, 255, 255);
+  border: 0.5px solid rgb(207, 207, 207);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  color: rgb(109, 109, 109);
+}
+
+.signup-bottom-heading {
+  font-size: 1.1rem;
+  line-height: 1rem;
+  color: rgb(28, 28, 28);
+}
+
+.red {
+  color: red;
+}
+
+.check-label {
+  font-size: 0.8rem;
+}
