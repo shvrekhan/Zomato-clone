@@ -137,7 +137,7 @@ class SignUp extends React.Component {
                     <div className="modal-dialog modal-dialog-centered modal-md " role="document">
 
                         <div className="modal-content modal-container-padding">
-                            {this.state.isSignup === true && <h1>ok</h1>}
+                            {this.state.isSignup === true && <h1>signup Success</h1>}
                             {this.state.isSignup === false && <>
                                 <form onSubmit={this.handelSubmit}>
                                     <section className="d-flex signup-heading">
