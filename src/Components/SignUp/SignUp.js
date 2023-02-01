@@ -26,6 +26,7 @@ class SignUp extends React.Component {
     }
 
     validateUserName = (value) => {
+        console.log(this.props.userDetails, "ok");
         if (value.trim().length === 0) {
             this.setState(
                 {
@@ -240,6 +241,11 @@ class SignUp extends React.Component {
     }
 }
 
+const mapStoreToProps = (stateInStore) => {
+    console.log(stateInStore);
+    return {
+        list: stateInStore.userDetails,
+    }
+}
 
-
-export default connect(null, { addUser })(SignUp);
+export default connect(mapStoreToProps, { addUser })(SignUp);
