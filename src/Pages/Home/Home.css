@@ -1,3 +1,19 @@
-.hotel-category{
-    
+.collection-heading {
+  font-weight: 500;
+  font-size: 2.25rem;
+}
+
+.collection-info-content {
+  font-size: 1.1rem;
+}
+.right-info-collections {
+  color: RGB(243 124 138);
+}
+
+.localities-heading {
+  margin: 0px;
+  color: rgb(54, 54, 54);
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 400;
 }
