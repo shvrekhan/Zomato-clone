@@ -79,7 +79,8 @@
 
 .btn-style-none {
   border: none;
-  background-color: white;
+  color: white;
+  background: inherit;
 }
 
 .create-button-padding {
