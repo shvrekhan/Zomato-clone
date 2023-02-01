@@ -1,0 +1,27 @@
+.search-bar-container {
+  border-radius: 0.5rem;
+}
+.location-icon-custom-css {
+  color: #f37c8a;
+  background-color: white;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.triangle-icon-custom-css {
+  color: rgb(79, 79, 79);
+  background-color: white;
+  padding: 1rem 0.5rem 0rem 0.5rem;
+}
+.search-icon-custom-css {
+  background-color: white;
+  color: rgb(130, 130, 130);
+  padding: 1rem 0.5rem 0rem 0.5rem;
+}
+.search-input {
+  padding-right: 19rem;
+  border-radius: 0rem 0.5rem 0.5rem 0;
+  border: none;
+}
+.search-input:focus{
+    border: none;
+}
