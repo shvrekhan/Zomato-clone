@@ -71,3 +71,17 @@
 .continue-with-google {
   padding: 0.5rem 1rem 0.5rem 8rem;
 }
+
+.errorStyle {
+  font-size: "12px";
+  color: "rgb(225,69,70)";
+}
+
+.btn-style-none {
+  border: none;
+  background-color: white;
+}
+
+.create-button-padding {
+  padding: 1rem 1rem 1rem 1rem;
+}
