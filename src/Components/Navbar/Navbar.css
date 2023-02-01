@@ -1,0 +1,11 @@
+.get-the-app-color {
+  color: white;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
