@@ -33,7 +33,7 @@ class NavbarHotelPage extends Component {
                         </div>
                     </div> */}
                     <SearchBar />
-                    <span className='navhotel-signup'>Signup</span>
+                    <SignUp blackColor={true} />
 
                 </nav>
 
