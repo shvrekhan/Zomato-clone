@@ -9,7 +9,6 @@ import "./Home.css"
 class Home extends React.Component {
     render() {
         return (<>
-            {console.log(this.props.Collections)}
             <Header />
             <div className="hotel-category container d-flex flex-wrap justify-content-between mt-4">
                 {this.props.list.map((current) => {
@@ -38,7 +37,9 @@ class Home extends React.Component {
                     {this.props.Collections.map((current) => {
 
                         return (<Collections
-                            key={current.id} />)
+                            key={current.id}
+                            img={current.img}
+                            subHead={current.subhead} />)
                     })}</div>
             </div>
 
