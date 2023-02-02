@@ -26,7 +26,7 @@ class SignUp extends React.Component {
     }
 
     validateUserName = (value) => {
-        console.log(this.props.userDetails, "ok");
+        // console.log(this.props.list.users.userDetails.userName, "ok");
         if (value.trim().length === 0) {
             this.setState(
                 {
@@ -242,9 +242,9 @@ class SignUp extends React.Component {
 }
 
 const mapStoreToProps = (stateInStore) => {
-    console.log(stateInStore);
+    // console.log(stateInStore);
     return {
-        list: stateInStore.userDetails,
+        list: stateInStore,
     }
 }
 
