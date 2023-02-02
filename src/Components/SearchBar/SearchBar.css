@@ -16,12 +16,50 @@
   background-color: white;
   color: rgb(130, 130, 130);
   padding: 1rem 0.5rem 0rem 0.5rem;
+  height: 100%;
 }
 .search-input {
   padding-right: 19rem;
-  border-radius: 0rem 0.5rem 0.5rem 0;
+  border-radius: 0;
   border: none;
 }
-.search-input:focus{
+.search-input:focus {
+  border: none;
+}
+
+.dropdown-border {
+  height: 100%;
+  border: none;
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 790px) {
+  .search-input {
+    padding-right: 12rem;
+    border-radius: 0;
     border: none;
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
 }
