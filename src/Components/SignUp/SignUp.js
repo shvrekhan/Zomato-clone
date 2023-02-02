@@ -3,6 +3,7 @@ import validator from 'validator';
 import { connect } from 'react-redux';
 import { addUser } from '../../redux/action';
 import "./SignUp.css"
+import { Link } from 'react-router-dom';
 
 class SignUp extends React.Component {
 
@@ -22,6 +23,7 @@ class SignUp extends React.Component {
             isPasswordValid: false,
             isCheckBoxValid: false,
             isSignup: false,
+            isValid: false,
         }
     }
 
@@ -92,6 +94,19 @@ class SignUp extends React.Component {
                 checkboxError: false,
                 checkbox: checked,
                 isCheckBoxValid: true,
+            }, () => {
+                const { isUserNameValid,
+                    isEmailValid,
+                    isPasswordValid,
+                    isCheckBoxValid } = this.state;
+
+                if (isUserNameValid && isEmailValid && isCheckBoxValid && isPasswordValid) {
+                    this.props.addUser(this.state)
+                    this.setState({
+                        isValid: true,
+                    })
+                }
+
             });
         }
         else {
@@ -100,6 +115,7 @@ class SignUp extends React.Component {
                 isCheckBoxValid: false
             });
         }
+
     }
 
     handelSubmit = (event) => {
@@ -124,8 +140,8 @@ class SignUp extends React.Component {
                     className="btn-style-none"
                     data-toggle="modal"
                     data-target="#exampleModalCenter">
-
-                    Sign Up
+                    {this.state.isSignup === true && <span>{this.state.userName}</span>}
+                    {this.state.isSignup === false && <span>Sign Up</span>}
                 </button>
 
                 <div className="modal fade "
@@ -138,14 +154,24 @@ class SignUp extends React.Component {
                     <div className="modal-dialog modal-dialog-centered modal-md " role="document">
 
                         <div className="modal-content modal-container-padding">
-                            {this.state.isSignup === true && <h1>signup Success</h1>}
-                            {this.state.isSignup === false && <>
-                                <form onSubmit={this.handelSubmit}>
-                                    <section className="d-flex signup-heading">
-                                        <h2 className="signup-form-heading">Sign up</h2>
 
-                                    </section>
+                            <form onSubmit={this.handelSubmit}>
+                                <section className="d-flex signup-heading justify-content-between">
+                                    {this.state.isSignup === true ?
+                                        <>
+                                            <div class="alert alert-success w-100 h-400" role="alert">
+                                                SignUp success.
+                                            </div>
 
+                                        </> : <h2 className="signup-form-heading">SignUp</h2>}
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                </section>
+
+                                {this.state.isSignup === false && <>
                                     <section className="d-flex flex-column input-section">
                                         <input type="text"
                                             className="input-field-signup "
@@ -202,11 +228,18 @@ class SignUp extends React.Component {
                                             and <span className="red">Content Policies</span>
                                         </label>
                                     </div>
+                                    {this.state.isValid === true && <>
+                                        <button className="create-account mb-3 create-button-padding active-button"
+                                            type="submit">Create account</button>
+                                    </>}
 
+                                    {this.state.isValid === false && <>
+                                        <button className="create-account mb-3 create-button-padding"
+                                            type="submit">Create account</button>
+                                    </>}
 
-                                    <button className="create-account mb-3 create-button-padding"
-                                        type="submit">Create account</button>
-                                    <div role="button" className="continue-with-google">
+                                    <div role="button"
+                                        className="continue-with-google">
                                         <svg
                                             width="24"
                                             height="24"
@@ -230,8 +263,8 @@ class SignUp extends React.Component {
                                         <span className="red">Log in</span>
                                     </p>
 
-                                </form>
-                            </>}
+                                </>}
+                            </form>
 
                         </div>
                     </div>
