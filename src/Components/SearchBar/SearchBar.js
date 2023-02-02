@@ -5,7 +5,7 @@ class SearchBar extends Component {
     render() {
         return (
             <>
-                <div className='search-bar-container d-flex align-self-center pb-4'>
+                <div className='search-bar-container d-flex flex-wrap align-self-center pb-5'>
                     <div className='location-input-container d-flex'>
                         <div className='fa-sharp fa-solid fa-location-dot fa-2x location-icon-custom-css'></div>
                         <input placeholder='Bengaluru' className='location-input' />
