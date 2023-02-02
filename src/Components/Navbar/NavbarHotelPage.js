@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import SearchBar from '../SearchBar/SearchBar';
+import SignUp from '../SignUp/SignUp';
 
 class NavbarHotelPage extends Component {
     render() {
@@ -16,19 +18,25 @@ class NavbarHotelPage extends Component {
                         </Link>
                     </a>
 
-                    <div className='search-bar-container d-flex  shadow-search'>
+                    {/* <div className='search-bar-container d-flex  shadow-search'>
                         <div className='location-input-container d-flex'>
                             <div className='fa-sharp fa-solid fa-location-dot fa-2x location-icon-custom-css'></div>
                             <input placeholder='Bengaluru' className='location-input' />
                             <div className='fa-solid fa-caret-up  triangle-icon-custom-css'></div>
                         </div>
                         <div className='search-input-container d-flex'>
-                            <div className='fa-solid fa-magnifying-glass  search-icon-custom-css'></div>
-                            <input placeholder='Search for restaurant, cuisine or a dish' className='search-input' />
+                            <input
+                                placeholder='Search for restaurant, cuisine or a dish'
+                                className='search-input'
+                                onChange={this.handelSearch} />
+                            <Link to={"/search/" + this.props.searchInput}><div className='fa-solid fa-magnifying-glass  search-icon-custom-css'></div></Link>
                         </div>
-                    </div>
+                    </div> */}
+                    <SearchBar />
                     <span className='navhotel-signup'>Signup</span>
+
                 </nav>
+
             </>
         )
     }
