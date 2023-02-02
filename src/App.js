@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home";
 import { connect } from "react-redux";
 import HotelCategoryWise from "./Pages/HotelsCategoryWise/HotelCategoryWise";
 import RestaurantPage from "./Pages/RestaurantPage/RestaurantPage";
+import SearchDish from "./Pages/SearchDish/SearchDish"
 
 class App extends React.Component {
   render() {
@@ -20,6 +21,12 @@ class App extends React.Component {
 
           <Route exact path="/restaurant/:id" render={(props) => {
             return <RestaurantPage
+              {...props}
+              restaurant={this.props.restaurant} />
+          }} />
+
+          <Route exact path="/search/:dish" render={(props) => {
+            return <SearchDish
               {...props}
               restaurant={this.props.restaurant} />
           }} />
