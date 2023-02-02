@@ -1,5 +1,4 @@
-import { ADD_EMAIL, ADD_PASSWORD, ADD_USER } from "../actionType";
-import { uuid } from 'uuid';
+import { ADD_USER } from "../actionType";
 
 const initialState = {
     userDetails: {
