@@ -1,0 +1,7 @@
+.cover{
+    object-fit: cover;
+}
+
+.image-container-width{
+    max-height: 450px;
+}
