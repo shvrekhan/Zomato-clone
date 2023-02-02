@@ -1,0 +1,91 @@
+.explore-card {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  /* height: -webkit-fit-content; */
+  /* height: -moz-fit-content; */
+  height: fit-content;
+  margin: 12px 0 24px;
+  padding: 10px;
+}
+
+.cur-point {
+  cursor: pointer;
+}
+
+.explore-card-cover {
+  border-radius: 15px;
+  height: 248px;
+  position: relative;
+  width: 328px;
+}
+
+.explore-card-image {
+  border-radius: 15px;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.delivery-time {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: var(--primary-bg);
+  border-radius: 4px;
+  bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.8;
+  padding: 2px 5px 3px;
+  position: absolute;
+  right: 10px;
+}
+
+.discount,
+.pro-off {
+  border-radius: 0 2px 2px 0;
+  color: var(--primary-bg);
+  font-size: 14px;
+  font-weight: 500;
+  left: 0;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 0 6px;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.absolute-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.res-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0 6px;
+}
+.res-name {
+  color: var(--heading-text);
+  font-size: 18px;
+  font-weight: 600;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.res-rating {
+  background-color: var(--tag-green);
+  border-radius: 6px;
+  color: var(--primary-bg);
+  font-size: 13px;
+  height: 24px;
+  padding: 0 8px;
+}
+
+.growinggrapg-image {
+  width: 1.4rem;
+  height: 1.4rem;
+  object-fit: cover;
+}
