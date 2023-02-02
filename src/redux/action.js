@@ -1,4 +1,4 @@
-import { ADD_USER, ADD_PASSWORD, ADD_EMAIL } from "./actionType";
+import { ADD_USER, SEARCH } from "./actionType";
 
 export const addUser = (userName) => ({
     type: ADD_USER,
@@ -7,3 +7,9 @@ export const addUser = (userName) => ({
     }
 });
 
+export const search = (searchInput) => ({
+    type: SEARCH,
+    payload: {
+        searchInput,
+    }
+})
