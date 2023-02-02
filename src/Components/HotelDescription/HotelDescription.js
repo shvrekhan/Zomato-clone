@@ -5,7 +5,6 @@ export default class HotelDescription extends Component {
     render() {
         return (
             <>
-                {console.log(this.props.current, "okkkkkkkkkkk")}
                 <div className='container d-flex flex-column'>
                     <div className='d-flex images-container gap-1 image-container-width'>
                         <img className='w-75 p-1 cover' src={this.props.current.imgUrl} />
@@ -30,10 +29,10 @@ export default class HotelDescription extends Component {
                     <div className='hotel-list'>
                         <h3>Our Dishes</h3>
 
-                        <div className='d-flex'>
+                        <div className='d-flex justify-content-center'>
                             {this.props.current.items.map((currentDish) => {
                                 return (
-                                    <div class="card" style={{ maxWidth: "18rem" }}>
+                                    <div class="card d-flex" style={{ maxWidth: "18rem" }}>
                                         <img class="card-img-top" src={currentDish.imgUrl} alt="Card image cap" />
                                         <div class="card-body">
                                             <h5 class="card-title">{currentDish.title}</h5>
