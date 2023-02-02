@@ -3,6 +3,7 @@
   background-repeat: round;
   object-fit: cover;  
   gap: 3rem;
+  padding-bottom: 3rem;
   /* width: 100vw; */
 }
 .head-info-section{
