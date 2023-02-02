@@ -28,7 +28,6 @@ class SignUp extends React.Component {
     }
 
     validateUserName = (value) => {
-        // console.log(this.props.list.users.userDetails.userName, "ok");
         if (value.trim().length === 0) {
             this.setState(
                 {
@@ -140,8 +139,26 @@ class SignUp extends React.Component {
                     className="btn-style-none"
                     data-toggle="modal"
                     data-target="#exampleModalCenter">
-                    {this.state.isSignup === true && <span>{this.state.userName}</span>}
-                    {this.state.isSignup === false && <span>Sign Up</span>}
+
+                    {this.state.isSignup === true &&
+                        this.props.blackColor === true &&
+                        <span className='blackColor'>
+                            {this.state.userName}
+                        </span>}
+
+                    {this.state.isSignup === false &&
+                        this.props.blackColor === true &&
+                        <span className='blackColor'>
+                            Sign Up
+                        </span>}
+
+                    {this.state.isSignup === true &&
+                        <span>{this.state.userName}</span>
+                    }
+                    
+                    {this.state.isSignup === false &&
+                        <span>Sign Up</span>
+                    }
                 </button>
 
                 <div className="modal fade "
