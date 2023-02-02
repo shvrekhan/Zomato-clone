@@ -5,7 +5,7 @@ export default class HotelCard extends Component {
     render() {
         return (
             <>
-                <div class="explore-card cur-point">
+                <div class="explore-card cur-point card-shadow">
                     <div class="explore-card-cover">
                         <img src={this.props.img}
                             alt={this.props.title}
