@@ -7,6 +7,8 @@ import RestaurantPage from "./Pages/RestaurantPage/RestaurantPage";
 import SearchDish from "./Pages/SearchDish/SearchDish"
 import Cart from "./Pages/Cart/Cart";
 import Footer from "./Components/Footer/Footer";
+import Checkout from "./Pages/Checkout/Checkout";
+import DineOut from "./Pages/DineOut/DineOut";
 
 class App extends React.Component {
   render() {
@@ -31,12 +33,30 @@ class App extends React.Component {
             <Route exact path="/search/:dish" render={(props) => {
               return <SearchDish
                 {...props}
-                restaurant={this.props.restaurant} />
+                restaurant={this.props.restaurant}
+                dish={this.props.dishes} />
             }} />
 
             <Route exact path="/cart">
               <Cart />
             </Route>
+
+            <Route exact path="/checkout">
+              <Checkout />
+            </Route>
+
+            <Route exact path="/fine_dine">
+              <DineOut
+                dineOut={this.props.dineOut}
+                hotelType="Dining Restaurants" />
+            </Route>
+
+            <Route exact path="/night_life">
+              <DineOut
+                dineOut={this.props.dineOut}
+                hotelType="Nightlife Restaurants" />
+            </Route>
+
 
           </Switch>
         </BrowserRouter>
@@ -48,9 +68,11 @@ class App extends React.Component {
 }
 
 const mapStoreToProps = (stateInStore) => {
-  // console.log(stateInStore.hotels.hotels);
+  // console.log(stateInStore.DineOut.dineOut)
   return {
     restaurant: stateInStore.hotels.hotels,
+    dishes: stateInStore.dishes.dishes,
+    dineOut: stateInStore.DineOut.dineOut,
 
   }
 }
