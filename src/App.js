@@ -5,34 +5,44 @@ import { connect } from "react-redux";
 import HotelCategoryWise from "./Pages/HotelsCategoryWise/HotelCategoryWise";
 import RestaurantPage from "./Pages/RestaurantPage/RestaurantPage";
 import SearchDish from "./Pages/SearchDish/SearchDish"
+import Cart from "./Pages/Cart/Cart";
+import Footer from "./Components/Footer/Footer";
 
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+      <>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-          <Route exact path="/online_order">
-            <HotelCategoryWise />
-          </Route>
+            <Route exact path="/online_order">
+              <HotelCategoryWise />
+            </Route>
 
-          <Route exact path="/restaurant/:id" render={(props) => {
-            return <RestaurantPage
-              {...props}
-              restaurant={this.props.restaurant} />
-          }} />
+            <Route exact path="/restaurant/:id" render={(props) => {
+              return <RestaurantPage
+                {...props}
+                restaurant={this.props.restaurant} />
+            }} />
 
-          <Route exact path="/search/:dish" render={(props) => {
-            return <SearchDish
-              {...props}
-              restaurant={this.props.restaurant} />
-          }} />
+            <Route exact path="/search/:dish" render={(props) => {
+              return <SearchDish
+                {...props}
+                restaurant={this.props.restaurant} />
+            }} />
 
-        </Switch>
-      </BrowserRouter>
+            <Route exact path="/cart">
+              <Cart />
+            </Route>
+
+          </Switch>
+        </BrowserRouter>
+        <Footer />
+      </>
+
     )
   }
 }
