@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addToCart, removeFromCart } from '../../redux/action'
+import Dish from '../Dish/Dish'
 import "./HotelDescription.css"
 
-export default class HotelDescription extends Component {
+class HotelDescription extends Component {
     render() {
         return (
             <>
@@ -30,16 +33,21 @@ export default class HotelDescription extends Component {
                         <h3>Our Dishes</h3>
 
                         <div className='d-flex justify-content-center'>
-                            {this.props.current.items.map((currentDish) => {
+                            {console.log(this.props.current.items, "sdjsdkfs")}
+                            {this.props.current.items.map((currentDish, index) => {
                                 return (
-                                    <div class="card d-flex" style={{ maxWidth: "18rem" }}>
-                                        <img class="card-img-top" src={currentDish.imgUrl} alt="Card image cap" />
-                                        <div class="card-body">
-                                            <h5 class="card-title">{currentDish.title}</h5>
-                                            <p class="card-text">{currentDish.description}</p>
-                                            <a href="#" class="btn btn-primary">Add to cart</a>
-                                        </div>
-                                    </div>
+                                    <Dish
+                                        key={currentDish.id}
+                                        index={index}
+                                        id={currentDish.id}
+                                        img={currentDish.imgUrl}
+                                        title={currentDish.title}
+                                        description={currentDish.description}
+                                        current={currentDish}
+                                        addToCart={this.props.addToCart}
+                                        removeFromCart={this.props.removeFromCart}
+                                        cart={this.props.cart}
+                                    />
                                 )
                             })}
                         </div>
@@ -51,3 +59,13 @@ export default class HotelDescription extends Component {
         )
     }
 }
+
+const mapStoreToProps = (stateInStore) => {
+    console.log(stateInStore.cart.cart);
+    return {
+        cart: stateInStore.cart.cart,
+    }
+}
+
+
+export default connect(mapStoreToProps, { addToCart, removeFromCart })(HotelDescription);
