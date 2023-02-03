@@ -1,0 +1,20 @@
+.checkout-box {
+  border: 1px  black;
+  width: 22rem;
+}
+
+.cart-total-quantity {
+}
+
+.check-out-button {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  align-self: center;
+  width: 75%;
+}
+
+.check-out-button:hover {
+  color: white;
+  background-color: RGB(225 69 70);
+}
