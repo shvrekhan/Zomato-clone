@@ -5,18 +5,7 @@ import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 
 class Header extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            isSignup: false,
-        }
-    }
-
-    handelSignup = () => {
-        this.setState({
-            isSignup: !this.state.isSignup
-        })
-    }
+    
 
     render() {
         return (
