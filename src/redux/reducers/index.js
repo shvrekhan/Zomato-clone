@@ -7,6 +7,20 @@ import collections from "./Collections"
 import topHotels from "./TopHotels"
 import search from "./search";
 import cart from "./Cart";
+import dishes from "./Dishes"
+import DineOut from "./DineOut";
+import nightLife from "./NightLife"
 
-export default combineReducers({ users, hotels, hotelCategory, collections, topHotels, search, cart });
+export default combineReducers({
+    users,
+    hotels,
+    hotelCategory,
+    collections,
+    topHotels,
+    search,
+    cart,
+    dishes,
+    DineOut,
+    nightLife
+});
 
