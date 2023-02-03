@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HotelCard from '../../Components/HotelCard/HotelCard'
 import NavbarHotelPage from "../../Components/Navbar/NavbarHotelPage"
+import Dish from "../../Components/Dish/Dish"
 import { Link } from 'react-router-dom'
 
 export default class SearchDish extends Component {
@@ -14,8 +15,7 @@ export default class SearchDish extends Component {
                     {this.props.restaurant.map((current) => {
                         if (current.title === this.props.match.params.dish ||
                             current.title.includes(this.props.match.params.dish
-                                )) {
-
+                            )) {
                             return (<Link to={"/restaurant/" + current.id}>
                                 <HotelCard
                                     key={current.id}
@@ -24,7 +24,8 @@ export default class SearchDish extends Component {
                                     category={current.category}
                                     rating={current.rating}
                                     price={current.price}
-                                /></Link>)
+                                /></Link>
+                            )
                         }
                     })}
                 </div>
