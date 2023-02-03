@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar';
 import SignUp from '../SignUp/SignUp';
+import { connect } from 'react-redux';
 
 class NavbarHotelPage extends Component {
     render() {
         return (
             <>
-                <nav class="navbar d-flex">
+                <nav class="navbar d-flex pl-5 pr-5">
                     <a class="navbar-brand">
                         <Link to="/">
                             <img
@@ -32,9 +33,16 @@ class NavbarHotelPage extends Component {
                             <Link to={"/search/" + this.props.searchInput}><div className='fa-solid fa-magnifying-glass  search-icon-custom-css'></div></Link>
                         </div>
                     </div> */}
+
                     <SearchBar />
-                    <SignUp blackColor={true} />
-                    <Link to="/cart"><span>Cart</span></Link>
+                    <Link to="/cart">
+                        <span>
+                            Cart
+                        </span>
+                    </Link>
+                    {this.props.isSignUp === true && <span>Shiva</span>}
+                    {this.props.isSignUp === undefined && <SignUp blackColor={true} />}
+
 
                 </nav>
 
@@ -43,4 +51,12 @@ class NavbarHotelPage extends Component {
     }
 }
 
-export default NavbarHotelPage;
+const mapStoreToProps = (stateInStore) => {
+    console.log(stateInStore.users.userDetails.userName.isSignup)
+    return {
+        isSignUp: stateInStore.users.userDetails.userName.isSignup,
+
+    }
+}
+
+export default connect(mapStoreToProps, {})(NavbarHotelPage);
