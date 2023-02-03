@@ -16,13 +16,13 @@ class SearchBar extends Component {
                 <div className='search-bar-container d-flex flex-wrap align-self-center justify-content-center'>
                     <div className='location-input-container d-flex'>
                         <div className='fa-sharp fa-solid fa-location-dot fa-2x location-icon-custom-css'></div>
-                        <select class="form-control dropdown-border">
+                        <select class="form-control dropdown-border drop-down-mobile">
                             <option value="">Select Location</option>
                             <option value="Koramangala">Koramangala</option>
                             <option value="Marathahalli">Marathahalli</option>
                             <option value="Bhoganahalli">Bhoganahalli</option>
                         </select>
-                        <div className='fa-solid fa-caret-up  triangle-icon-custom-css'></div>
+                        {/* <div className='fa-solid fa-caret-up  triangle-icon-custom-css'></div> */}
                     </div>
                     <div className='search-input-container d-flex'>
                         <input
@@ -30,7 +30,10 @@ class SearchBar extends Component {
                             className='search-input'
                             defaultValue={this.props.searchInput}
                             onChange={this.handelSearch} />
-                        <Link to={"/search/" + this.props.searchInput}><div className='fa-solid fa-magnifying-glass  search-icon-custom-css'></div></Link>
+                        <Link to={"/search/" + this.props.searchInput}>
+                            <div className='fa-solid fa-magnifying-glass  search-icon-custom-css'>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </>
