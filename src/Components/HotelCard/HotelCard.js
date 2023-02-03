@@ -10,7 +10,10 @@ export default class HotelCard extends Component {
                         <img src={this.props.img}
                             alt={this.props.title}
                             class="explore-card-image" />
-                        <div class="delivery-time">19 min</div>
+
+                        {this.props.delivery &&
+                            <div class="delivery-time">19 min</div>
+                        }
 
                     </div>
                     <div class="res-row">
@@ -24,15 +27,17 @@ export default class HotelCard extends Component {
                             <span class="res-cuisine-tag">{this.props.category}</span>
 
                         </div>
-                        <div class="res-price">₹{this.props.price} for one</div>
+                        {this.props.delivery &&
+                            <div class="res-price">₹{this.props.price} for one</div>}
                     </div>
                     <div>
                         <div class="card-separator">
                         </div>
-                        <div class="explore-bottom d-flex">
-                            <img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png" alt="6325+ orders placed from here recently" className='growinggrapg-image' />
-                            <div class="res-bottom-text">6325+ orders placed from here recently</div>
-                        </div>
+                        {this.props.delivery &&
+                            <div class="explore-bottom d-flex">
+                                <img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png" alt="6325+ orders placed from here recently" className='growinggrapg-image' />
+                                <div class="res-bottom-text">6325+ orders placed from here recently</div>
+                            </div>}
                     </div>
                 </div>
             </>
