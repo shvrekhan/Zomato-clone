@@ -13,9 +13,8 @@ class Navbar extends Component {
                         target="_blank">
                         Get the App
                     </a>
-                    <SignUp/>
-                    {/* {this.props.isSignup === false && <SignUp />} */}
-                    {/* {this.props.isSignup===true && } */}
+                    <SignUp />
+
 
                 </nav>
             </>
@@ -24,9 +23,8 @@ class Navbar extends Component {
 }
 
 const mapStoreToProps = (stateInStore) => {
-    console.log(stateInStore.users.userDetails.userName);
     return {
-        isSignup: stateInStore.users.userDetails.isSignup,
+        isSignUp: stateInStore.users.userDetails.userName.isSignup,
     }
 }
 
