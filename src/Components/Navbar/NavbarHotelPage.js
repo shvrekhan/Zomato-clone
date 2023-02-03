@@ -34,6 +34,7 @@ class NavbarHotelPage extends Component {
                     </div> */}
                     <SearchBar />
                     <SignUp blackColor={true} />
+                    <Link to="/cart"><span>Cart</span></Link>
 
                 </nav>
 

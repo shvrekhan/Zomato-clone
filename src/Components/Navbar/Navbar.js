@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import SignUp from '../SignUp/SignUp';
 import "./Navbar.css"
 
@@ -12,11 +13,22 @@ class Navbar extends Component {
                         target="_blank">
                         Get the App
                     </a>
-                    <SignUp />
+                    <SignUp/>
+                    {/* {this.props.isSignup === false && <SignUp />} */}
+                    {/* {this.props.isSignup===true && } */}
+
                 </nav>
             </>
         )
     }
 }
 
-export default Navbar;
+const mapStoreToProps = (stateInStore) => {
+    console.log(stateInStore.users.userDetails.userName);
+    return {
+        isSignup: stateInStore.users.userDetails.isSignup,
+    }
+}
+
+
+export default connect(mapStoreToProps, {})(Navbar);
