@@ -1,5 +1,5 @@
 .checkout-box {
-  border: 1px  black;
+  border: 1px black;
   width: 22rem;
 }
 
@@ -17,4 +17,14 @@
 .check-out-button:hover {
   color: white;
   background-color: RGB(225 69 70);
+}
+
+.no-item-in-cart {
+  /* background-image: url("../../Assets/pngegg.png"); */
+  /* background-repeat: no-repeat; */
+  /* height: 200px; */
+}
+
+.no-item-container {
+  /* height: 70vh; */
 }
