@@ -6,10 +6,16 @@ const initialState = {
         email: "",
         password: "",
         checkbox: false,
-        unameError: "",
+        usernameError: "",
         emailError: "",
         passwordError: "",
-        checkboxError: ""
+        checkboxError: "",
+        isUserNameValid: false,
+        isEmailValid: false,
+        isPasswordValid: false,
+        isCheckBoxValid: false,
+        isSignup: false,
+        isValid: false,
     }
 }
 
@@ -18,7 +24,6 @@ export default function (state = initialState, action) {
     switch (action.type) {
 
         case ADD_USER: {
-            // const { userName, email, password } = action.payload;
             const newState = {
                 ...state,
                 userDetails: {
