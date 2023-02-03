@@ -1,0 +1,25 @@
+.card-dish {
+  /* height: 20rem; */
+  /* border:1px solid red */
+  border: none;
+}
+.dish-card-image {
+  height: 50%;
+  border-radius: 1rem 1rem 0rem 0rem;
+  object-fit: cover;
+}
+
+.add-to-cart {
+  border: none;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+.live-cart-count {
+    border :1px solid black;
+    padding:.5rem 1.5rem .5rem 1.5rem
+}
+
+.remove-from-cart {
+  border: none;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
