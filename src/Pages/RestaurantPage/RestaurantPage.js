@@ -10,6 +10,7 @@ export default class RestaurantPage extends Component {
         {this.props.restaurant.map((current) => {
           if (current.id === this.props.match.params.id) {
             return <HotelDescription
+              key={current.id}
               title={current.title}
               img={current.imgUrl}
               items={current.item}
