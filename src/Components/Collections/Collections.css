@@ -1,5 +1,12 @@
-collection-card img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+.collection-card img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.border-none {
+  border: none;
+}
+
+.border-none:hover{
+    transform: scale(1.02);
 }

@@ -5,7 +5,7 @@ class Collections extends Component {
     render() {
         return (
             <>
-                <div className="card col-lg-3 col-sm-4 my-3 collection-card bg-white d-flex flex-column text-white ">
+                <div className="card col-lg-3 col-sm-4 my-3 collection-card bg-white d-flex flex-column text-white border-none ">
                     <img className="card-img "
                         src={this.props.img}
                         alt="Card image" />
