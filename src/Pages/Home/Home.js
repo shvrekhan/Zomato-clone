@@ -3,7 +3,6 @@ import { connect, Connect } from "react-redux";
 import { Link } from "react-router-dom";
 import CardHotelCategory from "../../Components/CardHotelCategory/CardHotelCategory";
 import Collections from "../../Components/Collections/Collections";
-import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import "./Home.css"
 
@@ -11,9 +10,10 @@ class Home extends React.Component {
     render() {
         return (<>
             <Header />
-            <div className="hotel-category container d-flex flex-wrap justify-content-between mt-5">
+            <div className="hotel-category container d-flex flex-wrap justify-content-center mt-5">
+
                 {this.props.list.map((current) => {
-                    return (<Link to={current.route}>
+                    return (<Link to={current.route} >
                         < CardHotelCategory
                             key={current.id}
                             img={current.img}
@@ -75,7 +75,6 @@ class Home extends React.Component {
 }
 
 const mapStoreToProps = (stateInStore) => {
-    // console.log(stateInStore);
     return {
         list: stateInStore.hotelCategory.hotelCategory,
         Collections: stateInStore.collections.collections
