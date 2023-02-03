@@ -1,0 +1,32 @@
+.cart-card-1 {
+  /* border:1px solid red */
+}
+.image-container-cart {
+  flex-basis: 25%;
+}
+.image-cart-item {
+  height: 100%;
+}
+
+.information-cart {
+  flex-basis: 50%;
+  padding-left: 0.5rem;
+}
+.price-counter {
+  flex-basis: 25%;
+  /* border: 1px solid blue; */
+}
+
+.counter-button {
+    border: none;
+  padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+}
+.counter-button:hover {
+  background-color: RGB(225 69 70);
+  color: white;
+}
+
+.counter-count {
+  /* border: 1px solid black; */
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
