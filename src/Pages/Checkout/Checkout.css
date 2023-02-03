@@ -1,0 +1,93 @@
+.left-section {
+  flex-basis: 57%;
+}
+
+.right-section {
+  flex-basis: 42%;
+}
+
+.deliver-time {
+  background-color: rgb(245, 247, 254);
+  border-radius: 1rem;
+}
+
+.hour-glass-color {
+  color: RGB(243 124 138);
+}
+
+.item-left {
+  /* border: 1px solid red; */
+  flex-basis: 50%;
+}
+.item-right {
+  /* border: 1px solid blue; */
+  flex-basis: 50%;
+}
+
+.item-details-checkout {
+  background-color: rgb(245, 247, 254);
+  width: 80%;
+  border-radius: 1rem;
+  /* border: 1px solid black; */
+}
+
+.btn-control {
+  border: none;
+  background-color: rgb(254, 246, 244);
+  flex-basis: 29%;
+  border: 2px solid rgb(197, 94, 112);
+  border-radius: 0.5rem;
+}
+
+.control-btn {
+  border: none;
+  background-color: rgb(254, 246, 244);
+}
+
+.add-more-items {
+  background-color: rgb(245, 247, 254);
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.flex-icon {
+  /* border:1px solid red; */
+  flex-basis: 15%;
+  text-align: center;
+}
+.flex-addmore {
+  flex-basis: 70%;
+}
+
+.utensil {
+  color: rgb(127, 201, 140);
+}
+
+.saving-corner {
+  /* border: 1px solid red; */
+  width: 100%;
+  background-color: rgb(245, 247, 254);
+  border-radius: 1rem;
+}
+
+.discount-icon {
+  color: rgb(243, 124, 138);
+}
+
+.apply {
+  border: none;
+  background-color: inherit;
+  flex-basis: 10%;
+  font-weight: 700;
+  color: rgb(243, 124, 138);
+}
+.coupons-details {
+  flex-basis: 80%;
+}
+.discount-icon {
+  flex-basis: 10%;
+}
+
+.coupons{
+    width: 90%;
+}
