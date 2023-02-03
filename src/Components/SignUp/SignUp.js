@@ -100,7 +100,7 @@ class SignUp extends React.Component {
                     isCheckBoxValid } = this.state;
 
                 if (isUserNameValid && isEmailValid && isCheckBoxValid && isPasswordValid) {
-                    this.props.addUser(this.state)
+
                     this.setState({
                         isValid: true,
                     })
@@ -128,6 +128,8 @@ class SignUp extends React.Component {
             this.props.addUser(this.state)
             this.setState({
                 isSignup: true,
+            }, () => {
+                this.props.addUser(this.state)
             })
         }
     }
@@ -293,9 +295,9 @@ class SignUp extends React.Component {
 }
 
 const mapStoreToProps = (stateInStore) => {
-    // console.log(stateInStore);
     return {
         list: stateInStore,
+        isSignUp: stateInStore.users.userDetails.userName.isSignup,
     }
 }
 
