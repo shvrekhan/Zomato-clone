@@ -155,7 +155,7 @@ class SignUp extends React.Component {
                     {this.state.isSignup === true &&
                         <span>{this.state.userName}</span>
                     }
-                    
+
                     {this.state.isSignup === false &&
                         <span>Sign Up</span>
                     }
@@ -247,12 +247,13 @@ class SignUp extends React.Component {
                                     </div>
                                     {this.state.isValid === true && <>
                                         <button className="create-account mb-3 create-button-padding active-button"
-                                            type="submit">Create account</button>
+                                            type="submit" >Create account</button>
                                     </>}
 
                                     {this.state.isValid === false && <>
                                         <button className="create-account mb-3 create-button-padding"
-                                            type="submit">Create account</button>
+                                            type="submit"
+                                        >Create account</button>
                                     </>}
 
                                     <div role="button"
