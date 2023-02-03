@@ -24,3 +24,7 @@ a {
 a:hover {
   color: black;
 }
+
+.hotel-category > a {
+  text-decoration: none;
+}
