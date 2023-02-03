@@ -8,11 +8,14 @@ export default class SearchDish extends Component {
         return (
             <>
                 <NavbarHotelPage />
-                {console.log(this.props.restaurant)}
-                {console.log(this.props.match.params.dish)}
+                {console.log(this.props.restaurant, "okk")}
+                {console.log(this.props.match.params.dish, "po")}
                 <div className='d-flex container flex-wrap'>
                     {this.props.restaurant.map((current) => {
-                        if (current.title === this.props.match.params.dish) {
+                        if (current.title === this.props.match.params.dish ||
+                            current.title.includes(this.props.match.params.dish
+                                )) {
+
                             return (<Link to={"/restaurant/" + current.id}>
                                 <HotelCard
                                     key={current.id}
