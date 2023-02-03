@@ -15,7 +15,6 @@ class HotelCategoryWise extends Component {
 
                     <h3 className='top-brand-heading'>Top Brands for you</h3>
                     <div className='d-flex justify-content-around'>
-                        {console.log(this.props.topHotels)}
                         {this.props.topHotels.map((current) => {
 
                             return <RoundCard
@@ -27,8 +26,7 @@ class HotelCategoryWise extends Component {
                     </div>
 
                     <h1 className='mt-5'>Delivery Restaurants in Bengaluru</h1>
-                    <div className='d-flex container flex-wrap'>
-                        {console.log(this.props.hotels)}
+                    <div className='d-flex container flex-wrap hotels-container'>
                         {this.props.hotels.map((current) => {
                             return (<Link to={"/restaurant/" + current.id}>
                                 <HotelCard
@@ -38,6 +36,7 @@ class HotelCategoryWise extends Component {
                                     category={current.category}
                                     rating={current.rating}
                                     price={current.price}
+                                    delivery={true}
                                 /></Link>
                             )
                         })}
@@ -51,7 +50,6 @@ class HotelCategoryWise extends Component {
 
 
 const mapStoreToProps = (stateInStore) => {
-    // console.log(stateInStore.topHotels.topHotels);
     return {
         hotels: stateInStore.hotels.hotels,
         topHotels: stateInStore.topHotels.topHotels,
