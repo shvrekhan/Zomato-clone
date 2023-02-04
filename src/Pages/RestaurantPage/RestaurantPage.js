@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import HotelDescription from '../../Components/HotelDescription/HotelDescription';
 import NavbarHotelPage from "../../Components/Navbar/NavbarHotelPage"
 
-export default class RestaurantPage extends Component {
+class RestaurantPage extends Component {
   render() {
     return (
       <>
@@ -22,3 +22,4 @@ export default class RestaurantPage extends Component {
     )
   }
 }
+export default RestaurantPage;
