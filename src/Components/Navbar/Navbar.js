@@ -13,6 +13,7 @@ class Navbar extends Component {
                         target="_blank">
                         Get the App
                     </a>
+                    
                     <SignUp />
 
 

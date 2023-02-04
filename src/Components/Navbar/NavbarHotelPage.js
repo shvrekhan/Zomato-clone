@@ -18,29 +18,13 @@ class NavbarHotelPage extends Component {
                                 alt="" />
                         </Link>
                     </a>
-
-                    {/* <div className='search-bar-container d-flex  shadow-search'>
-                        <div className='location-input-container d-flex'>
-                            <div className='fa-sharp fa-solid fa-location-dot fa-2x location-icon-custom-css'></div>
-                            <input placeholder='Bengaluru' className='location-input' />
-                            <div className='fa-solid fa-caret-up  triangle-icon-custom-css'></div>
-                        </div>
-                        <div className='search-input-container d-flex'>
-                            <input
-                                placeholder='Search for restaurant, cuisine or a dish'
-                                className='search-input'
-                                onChange={this.handelSearch} />
-                            <Link to={"/search/" + this.props.searchInput}><div className='fa-solid fa-magnifying-glass  search-icon-custom-css'></div></Link>
-                        </div>
-                    </div> */}
-
                     <SearchBar />
                     <Link to="/cart">
                         <span>
                             Cart
                         </span>
                     </Link>
-                    {this.props.isSignUp === true && <span>Shiva</span>}
+                    {this.props.isSignUp === true && <span>{this.props.userName}</span>}
                     {this.props.isSignUp === undefined && <SignUp blackColor={true} />}
 
 
@@ -52,9 +36,11 @@ class NavbarHotelPage extends Component {
 }
 
 const mapStoreToProps = (stateInStore) => {
-    console.log(stateInStore.users.userDetails.userName.isSignup)
+    // console.log(stateInStore.users.userDetails.userName.userName)
     return {
         isSignUp: stateInStore.users.userDetails.userName.isSignup,
+        userName: stateInStore.users.userDetails.userName.userName,
+
 
     }
 }
