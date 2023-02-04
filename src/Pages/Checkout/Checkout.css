@@ -48,6 +48,7 @@
   background-color: rgb(245, 247, 254);
   width: 70%;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .flex-icon {
@@ -88,6 +89,61 @@
   flex-basis: 10%;
 }
 
-.coupons{
-    width: 90%;
+.coupons {
+  width: 90%;
+}
+
+.address-section-color {
+  color: rgb(243, 124, 138);
+  flex-basis: 10%;
+}
+
+.address {
+  background-color: rgb(245, 247, 254);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.address-change-button {
+  border: none;
+  background-color: inherit;
+  color: rgb(243, 124, 138);
+}
+
+.payment {
+  background-color: rgb(245, 247, 254);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+select {
+  border: none;
+  background-color: inherit;
+}
+.confirm-order {
+  background-color: rgb(241, 80, 97);
+  color: white;
+  border-radius: 1rem;
+}
+
+.confirm-order > a {
+  text-decoration: none;
+}
+
+.confirm-order-left-section {
+  flex-basis: 30%;
+}
+
+.confirm-order-right-section {
+  flex-basis: 55%;
+  padding: 1rem;
+}
+
+.total-price-to-be-paid {
+  font-weight: 900;
+}
+
+.confirm-order-not{
+  border-radius: 1rem;
+  background-color: lightgray;
 }
