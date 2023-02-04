@@ -24,10 +24,33 @@ export default class SearchDish extends Component {
                                     category={current.category}
                                     rating={current.rating}
                                     price={current.price}
+                                    delivery={true}
                                 /></Link>
                             )
                         }
                     })}
+
+                    {this.props.restaurant.reduce((acc, current) => {
+                        current.items.map((currentDish) => {
+                            if (currentDish.title.includes(this.props.match.params.dish)) {
+                                acc.push(<Link to={"/restaurant/" + current.id}>
+                                    <HotelCard
+                                        key={current.id}
+                                        img={current.imgUrl}
+                                        title={current.title}
+                                        category={current.category}
+                                        rating={current.rating}
+                                        price={current.price}
+                                        delivery={true}
+                                    />
+                                </Link>)
+                            }
+                            return acc;
+                        })
+                        return acc;
+                    }, [])}
+
+
                 </div>
 
             </>
