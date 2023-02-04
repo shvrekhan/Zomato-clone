@@ -36,22 +36,25 @@ export default function (state = initialState, action) {
                 return item.id === action.payload.id;
             })
             console.log(itemIndexToDec);
-            if (itemIndexToDec >= 0 && state.cart[itemIndexToDec].quantity >= 1) {
+            if (itemIndexToDec >= 0 && state.cart[itemIndexToDec].quantity > 1) {
                 state.cart[itemIndexToDec].quantity -= 1
                 return {
                     ...state,
                     cart: [...state.cart]
 
                 }
-            } else if (state.cart[itemIndexToDec].quantity === 1) {
+            } else {
                 console.log("delete")
                 const data = state.cart.filter((item) => {
-                    return item.id !== action.payload;
+                    console.log(item, "items")
+                    console.log(action.payload, "payload")
+                    return item.id !== action.payload.id;
                 })
+                console.log(data);
 
                 return {
                     ...state,
-                    carts: data,
+                    cart: data,
                 }
             }
 

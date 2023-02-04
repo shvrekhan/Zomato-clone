@@ -10,6 +10,8 @@ import cart from "./Cart";
 import dishes from "./Dishes"
 import DineOut from "./DineOut";
 import nightLife from "./NightLife"
+import address from "./Address";
+import yourOrders from "./YourOrders";
 
 export default combineReducers({
     users,
@@ -21,6 +23,8 @@ export default combineReducers({
     cart,
     dishes,
     DineOut,
-    nightLife
+    nightLife,
+    address,
+    yourOrders
 });
 

@@ -1,6 +1,39 @@
 const initialState = {
     hotels: [
         {
+            id: "1044513",
+            title: "Mavalli Tiffin Room (MTR)",
+            category: ["South Indian", "Dosa"],
+            rating: "4.4",
+            items: [
+                {
+                    id: "111200000",
+                    title: "Masala Dosa",
+                    rating: "4.5",
+                    price: "107",
+                    imgUrl:
+                        "https://b.zmtcdn.com/data/pictures/chains/3/50663/1be39fbd83581c1847cc489b94f1faff.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                    description:
+                        "Crispy masala dosa with the meshed potato and coconut chuteny.",
+                },
+                {
+                    id: "11146",
+                    title: "Rawa idli",
+                    rating: "4.4",
+                    price: "55",
+                    imgUrl:
+                        "https://b.zmtcdn.com/data/pictures/chains/3/50663/28879f1bd73088a04037a9be99c904a1.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                    description:
+                        "Soft idli made with rawa served with the tender coconut and mint chutney.",
+                },
+            ],
+            price: "150",
+            imgUrl:
+                "https://b.zmtcdn.com/data/reviews_photos/5e4/8361ff114c8eb8dd41e0f862492085e4_1654352333.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+            time: "38 min",
+            location: "J.p nagar, South Bangalore",
+        },
+        {
             id: "100013",
             title: "Dal-icious",
             category: ["North Indian", "Biriyani"],
