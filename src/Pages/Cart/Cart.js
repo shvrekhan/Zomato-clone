@@ -84,7 +84,9 @@ class Cart extends Component {
                                         }, 0)}
                                     </h4>
                                 </div>
-                                <button className='check-out-button'><Link to="/checkout"> Checkout</Link></button>
+                                <button
+                                    className='check-out-button'>   
+                                    <Link to="/checkout"> Checkout</Link></button>
                             </div>
                         </div>
                     </div>}
@@ -98,6 +100,8 @@ class Cart extends Component {
 const mapStoreToProps = (stateInStore) => {
     return {
         cart: stateInStore.cart.cart,
+        isSignUp: stateInStore.users.userDetails.userName.isSignup,
+        userName: stateInStore.users.userDetails.userName.userName,
     }
 }
 
