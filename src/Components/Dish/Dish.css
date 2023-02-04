@@ -12,14 +12,49 @@
 .add-to-cart {
   border: none;
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: inherit;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  color: rgb(228, 104, 138);
 }
 
 .live-cart-count {
-    border :1px solid black;
-    padding:.5rem 1.5rem .5rem 1.5rem
+  /* border: 1px solid black; */
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  font-weight: bolder;
+  font-size: 1.3rem;
 }
 
 .remove-from-cart {
   border: none;
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: inherit;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  color: rgb(228, 104, 138);
+}
+
+.dish-component {
+  /* padding: 1rem; */
+  max-width: 70%;
+  /* border: 1px solid red; */
+  border-radius: 1.3rem;
+  background-color: rgb(245, 247, 254);
+  padding: 1rem;
+}
+
+.dish-image {
+  border-radius: 2rem;
+  object-fit: cover;
+  flex-basis: 30%;
+}
+
+.dish-details {
+  flex-basis: 60%;
+  padding-left: 1rem;
+}
+
+.controls {
+  flex-basis: 10%;
+  /* border: 2px solid rgb(228, 104, 138); */
 }

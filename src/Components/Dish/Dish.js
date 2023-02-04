@@ -33,10 +33,14 @@ export default class Dish extends Component {
         }
     }
 
+    componentDidMount() {
+        
+    }
+
     render() {
         return (
             <>
-                <div class="card d-flex m-1 card-dish" style={{ maxWidth: "18rem" }}>
+                {/* <div class="card d-flex m-1 card-dish" style={{ maxWidth: "18rem" }}>
                     <img class="card-img-top dish-card-image" src={this.props.img} alt="Card image cap" />
                     <div class="card-body">
                         <h5 class="card-title">{this.props.title}</h5>
@@ -48,6 +52,24 @@ export default class Dish extends Component {
                         </div>
 
                     </div>
+                </div> */}
+
+                <div className='d-flex dish-component mt-3'>
+                    <div className='dish-class'>
+                        <img src={this.props.img} className="dish-image" />
+                    </div>
+
+                    <div className='dish-details d-flex flex-column'>
+                        <h4 className='card-title'>{this.props.title}</h4>
+                        <p class="card-text">{this.props.description.slice(0, 50) + "...."}</p>
+                    </div>
+
+                    <div className='d-flex  flex-column justify-content-center align-items-center controls'>
+                        <button className='add-to-cart' onClick={this.handelAddToCart}>+</button>
+                        <span className='live-cart-count'>{this.state.counter}</span>
+                        <button className='remove-from-cart' onClick={this.handelRemoveFromCart}>-</button>
+                    </div>
+
                 </div>
             </>
         )
