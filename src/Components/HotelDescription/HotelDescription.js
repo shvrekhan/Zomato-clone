@@ -32,7 +32,7 @@ class HotelDescription extends Component {
                     <div className='hotel-list'>
                         <h3>Our Dishes</h3>
 
-                        <div className='d-flex justify-content-center'>
+                        <div className='d-flex flex-column justify-content-center'>
                             {console.log(this.props.current.items, "sdjsdkfs")}
                             {this.props.current.items.map((currentDish, index) => {
                                 return (
