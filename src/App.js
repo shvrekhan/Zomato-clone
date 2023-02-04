@@ -9,6 +9,8 @@ import Cart from "./Pages/Cart/Cart";
 import Footer from "./Components/Footer/Footer";
 import Checkout from "./Pages/Checkout/Checkout";
 import DineOut from "./Pages/DineOut/DineOut";
+import OneTheWay from "./Pages/OnTheWay/OneTheWay";
+import YourOrder from "./Pages/YourOrders/YourOrder";
 
 class App extends React.Component {
   render() {
@@ -45,6 +47,10 @@ class App extends React.Component {
               <Checkout />
             </Route>
 
+            <Route exact path="/your_orders">
+              <YourOrder />
+            </Route>
+
             <Route exact path="/fine_dine">
               <DineOut
                 dineOut={this.props.dineOut}
@@ -55,6 +61,10 @@ class App extends React.Component {
               <DineOut
                 dineOut={this.props.dineOut}
                 hotelType="Nightlife Restaurants" />
+            </Route>
+
+            <Route exact path="/order-on-the-way">
+              <OneTheWay />
             </Route>
 
 
@@ -68,11 +78,12 @@ class App extends React.Component {
 }
 
 const mapStoreToProps = (stateInStore) => {
-  // console.log(stateInStore.DineOut.dineOut)
+  console.log(stateInStore.cart.cart)
   return {
     restaurant: stateInStore.hotels.hotels,
     dishes: stateInStore.dishes.dishes,
     dineOut: stateInStore.DineOut.dineOut,
+
 
   }
 }
